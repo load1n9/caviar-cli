@@ -23,7 +23,7 @@ export const genProject = async () => {
   const resizable: boolean = await Confirm.prompt({
     message: "Window resizable: ",
   });
-  const boot: string = createScene(name);
+  const boot: string = createScene("Boot");
   const content = createWorld(name, title, width, height, resizable);
   await Deno.mkdir(`./${name}/src/scenes`, { recursive: true });
   await Deno.writeTextFile(`./${name}/src/scenes/Boot.ts`, boot);

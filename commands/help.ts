@@ -1,5 +1,8 @@
+import { VERSION } from "../version.ts";
+
 export const genHelp = () => {
     console.log(`
+    Caviar v${VERSION}
     Usage: caviar [command] [options]
     
     Commands:

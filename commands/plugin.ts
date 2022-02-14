@@ -1,10 +1,11 @@
 import { Input } from "https://deno.land/x/cliffy@v0.20.1/prompt/mod.ts";
+import { VERSION } from "../version.ts";
 export const genPlugin = async () => {
   const name: string = await Input.prompt({
     message: "Plugin name: ",
   });
   const content = 
-`import { World, Plugin } from 'https://deno.land/x/caviar/mod.ts';
+`import { World, Plugin } from "https://deno.land/x/caviar@${VERSION}/mod.ts";
 
 export class ${name} extends Plugin {
     constructor(world: World) {

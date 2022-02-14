@@ -1,3 +1,5 @@
+import { VERSION } from "../version.ts";
+
 export const createWorld = (
     name: string,
     title: string,
@@ -5,7 +7,7 @@ export const createWorld = (
     height: number,
     resizable: boolean,
 ) => 
-`import { World, Rectangle } from 'https://deno.land/x/caviar/mod.ts';
+`import { World } from "https://deno.land/x/caviar@${VERSION}/mod.ts";
 import { Boot } from './src/scenes/Boot.ts';
 
 const ${name} = new World({
